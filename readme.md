@@ -8,3 +8,5 @@
 [komentorivi.txt](https://github.com/Aikamoine/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
 
 *Tämä* on **lisätty** tekstipätkä.
+
+Tämä on merge conlfictia varten lisätty paikallisen repositorion tekstipätkä
