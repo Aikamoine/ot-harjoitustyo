@@ -10,7 +10,7 @@ Sovelluksen avulla käyttäjä voi pelata Sudoku-pelejä itseään vastaan. Sove
 Sovelluksessa on kolme eri näkymää. Aloitusruudulta valitaan millaisen pelin haluaa aloittaa - itse syötetyn sudokun vai valmiiksi tallennetun. Valinnasta riippuen aukeaa joko peliruutu suoraan tai sitten aukeaa ruutu, jossa voi täyttää sudokupelin aloitusnumerot ja sen jälkeen aloittaa kyseisen pelin.
 
 ## Perusversion vaatimusmäärittely
-- Peli on tyypilline 9 x 9 sudoku
+- Peli on tyypillinen 9 x 9 sudoku
 - Käyttäjä voi aloittaa pelin
 - Käyttäjä pystyy syöttämään pelin täyttämättömiin ruutuihin numeroita 1 - 9
 - Käyttäjä ei voi syöttää mihinkään kohtaan sellaista numeroa, jonka syöttäminen rikkoisi sudokun sääntöjä
@@ -22,3 +22,4 @@ Sovelluksessa on kolme eri näkymää. Aloitusruudulta valitaan millaisen pelin 
   - myös automaattitoiminto pelin ratkaisemiseen
 - Mahdollisuus tehdä eri kokoisia sudokuja
 - Valmiit sudokut on ryhmitelty vaikeustason mukaan, käyttäjä voi aloittaessa valita minkätasoisen pelin haluaa
+- Tyhjiin ruutuihin voi merkitä muistiinpanoksi/testiksi pieniä numeroita
