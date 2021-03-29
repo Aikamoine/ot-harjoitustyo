@@ -4,5 +4,6 @@
 | :----:|:-----| :-----|
 | 27.3. | 1    | Alustava dokumentaatio ja työn vaatimuksiin tutustuminen |
 | 28.3. | 1    | Poetryn ja Pytestin lisäämistä, virtuaalikoneella testaamista |
-| vko 2 | 2    | |
-| yht   | 2   | | 
+| 29.3. | 1    | Virtuaalikoneen testaus, Invoken lisääminen |
+| vko 2 | 3    | |
+| yht   | 3   | | 
