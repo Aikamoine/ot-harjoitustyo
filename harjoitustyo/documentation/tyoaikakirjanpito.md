@@ -3,5 +3,6 @@
 | päivä | aika | toteutus |
 | :----:|:-----| :-----|
 | 27.3. | 1    | Alustava dokumentaatio ja työn vaatimuksiin tutustuminen |
-| vko 2 | 1    | |
-| yht   | 1   | | 
+| 28.3. | 1    | Poetryn ja Pytestin lisäämistä, virtuaalikoneella testaamista |
+| vko 2 | 2    | |
+| yht   | 2   | | 
