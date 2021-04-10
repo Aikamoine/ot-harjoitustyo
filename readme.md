@@ -23,7 +23,9 @@ Pelin suorittaminen loppuu, kun kirjoitat "end" ja painat enter.
 
 ### Asennus ja käynnistys
 
-- Asenna aluksi Poetryn avulla riippuvuudet komentorivillä:
+- Kloonaa repositorio ja mene komentorivillä harjoitustyo-kansioon
+
+- Asenna Poetryn avulla riippuvuudet komentorivillä:
 ```bash
 poetry install
 ```

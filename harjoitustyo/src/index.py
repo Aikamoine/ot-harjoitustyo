@@ -1,5 +1,4 @@
 from gameboard import Gameboard
-from square import Square
 
 def main():
     gb = Gameboard(3)
