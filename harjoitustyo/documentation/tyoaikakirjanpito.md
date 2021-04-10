@@ -6,4 +6,6 @@
 | 28.3. | 1    | Poetryn ja Pytestin lisäämistä, virtuaalikoneella testaamista |
 | 29.3. | 1    | Virtuaalikoneen testaus, Invoken lisääminen |
 | vko 2 | 3    | |
-| yht   | 3   | | 
+| 10.4. | 3    | Ensimmäinen komentoriviversio, viikon 3 vaatimusten mukaisesti |
+| vko 2 | 3    | |
+| yht   | 6   | | 

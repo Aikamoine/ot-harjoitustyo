@@ -6,3 +6,6 @@
 /harjoitustyo/.pytest_cache
 /harjoitustyo/src/__pycache__/
 /harjoitustyo/src/tests/__pycache__/
+/harjoitustyo/src/square.py
+/harjoitustyo/.coverage
+/harjoitustyo/htmlcov

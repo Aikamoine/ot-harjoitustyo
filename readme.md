@@ -1,7 +1,47 @@
 # OHJELMISTOTEKNIIKKA 2021
 
+## Yleistä
+
+### [Sudokun säännöt](https://fi.wikipedia.org/wiki/Sudoku)
+
+"Sudoku on logiikkapeli, jossa tehtävänä on täyttää neliönmuotoinen ruudukko merkeillä niin että jokaisella vaakarivillä ja pystyrivillä sekä jokaisessa osaneliössä käytetään samaa merkkiä tasan yhden kerran. Ruudukossa on aluksi valmiina jo muutama merkki. Yleisin sudoku on 9 × 9 -ruudukko, joka on jaettu yhdeksään 3 × 3 ruudun osaneliöön, ja merkkeinä käytetään numeroita 1–9."
+
+### Tämän hetkinen toiminta
+
+Tällä hetkellä sovellus toimii komentorivillä. Se tulostaa yhden esimerkkisudokun ilman mitään muotoiluja ruutujen välillä. Tyhjään ruutuun voi syöttää numeron. Syötettä ei tällä hetkellä validoida, laadullisesti taikka pelin sääntöjen mukaan.
+
+Kun ohjelma käynnistyy, komentoriville tulostuu sudoku-peli. Voit lisätä numeroita tyhjiin ruutuihin kirjoittamalla komentoriville koordinaatit ja arvon muodossa "x,y,arvo". Taulukon origo on vasemmassa yläkulmassa, eli vasemman yläkulman sijanti on 0,0. Vasempaan yläkulmaan voi siis sijoittaa arvon 6 kirjoittamalla "0,0,6" ja painamalle enter.
+
+Pelin suorittaminen loppuu, kun kirjoitat "end" ja painat enter.
+
 ## Dokumentaatio
 
 - [Työaikakirjanpito](https://github.com/Aikamoine/ot-harjoitustyo/blob/master/harjoitustyo/documentation/tyoaikakirjanpito.md)
 - [Vaatimusmäärittely](https://github.com/Aikamoine/ot-harjoitustyo/blob/master/harjoitustyo/documentation/vaatimusmaarittely.md)
 
+## Komennot
+
+### Asennus ja käynnistys
+
+- Asenna aluksi Poetryn avulla riippuvuudet komentorivillä:
+```bash
+poetry install
+```
+- Käynnistä ohjelma komennolla:
+```bash
+poetry run invoke start
+```
+
+### Testaus
+
+Testit suoritetaan komennolla:
+
+```bash
+poetry run invoke test
+```
+
+Testikattavuusraportin saat luotua komennolla:
+
+```bash
+poetry run invoke coverage-report
+```
