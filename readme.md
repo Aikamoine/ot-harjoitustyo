@@ -16,8 +16,8 @@ Pelin suorittaminen loppuu, kun kirjoitat "end" ja painat enter. Sovellus myös 
 
 ## Dokumentaatio
 
-- [Työaikakirjanpito](https://github.com/Aikamoine/ot-harjoitustyo/blob/master/harjoitustyo/documentation/tyoaikakirjanpito.md)
-- [Vaatimusmäärittely](https://github.com/Aikamoine/ot-harjoitustyo/blob/master/harjoitustyo/documentation/vaatimusmaarittely.md)
+- [Työaikakirjanpito](https://github.com/Aikamoine/ot-harjoitustyo/blob/master/documentation/tyoaikakirjanpito.md)
+- [Vaatimusmäärittely](https://github.com/Aikamoine/ot-harjoitustyo/blob/master/documentation/vaatimusmaarittely.md)
 
 ## Komennot
 
