@@ -7,5 +7,7 @@
 | 29.3. | 1    | Virtuaalikoneen testaus, Invoken lisääminen |
 | vko 2 | 3    | |
 | 10.4. | 3    | Ensimmäinen komentoriviversio, viikon 3 vaatimusten mukaisesti |
-| vko 3 | 3    | |
-| yht   | 6   | | 
+| 12.4. | 0,5  | Codecov-ihmettelyä virtuaaliympäristössä |
+| 13.4. | 0,5  | Repositorion siistimistä |
+| vko 3 | 4    | |
+| yht   | 7    | | 

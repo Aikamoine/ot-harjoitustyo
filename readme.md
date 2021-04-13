@@ -12,7 +12,7 @@ Tällä hetkellä sovellus toimii komentorivillä. Se tulostaa yhden esimerkkisu
 
 Kun ohjelma käynnistyy, komentoriville tulostuu sudoku-peli. Voit lisätä numeroita tyhjiin ruutuihin kirjoittamalla komentoriville koordinaatit ja arvon muodossa "x,y,arvo". Taulukon origo on vasemmassa yläkulmassa, eli vasemman yläkulman sijanti on 0,0. Vasempaan yläkulmaan voi siis sijoittaa arvon 6 kirjoittamalla "0,0,6" ja painamalle enter.
 
-Pelin suorittaminen loppuu, kun kirjoitat "end" ja painat enter.
+Pelin suorittaminen loppuu, kun kirjoitat "end" ja painat enter. Sovellus myös sammuu, kun annat epäkelvon syötteen. Komentorivikäyttöliittymästä ei ole tarkoituskaan tehdä lopullista versiota, joten tämän syötteen validointiin ei erityisesti tulla panostamaan.
 
 ## Dokumentaatio
 
@@ -22,8 +22,6 @@ Pelin suorittaminen loppuu, kun kirjoitat "end" ja painat enter.
 ## Komennot
 
 ### Asennus ja käynnistys
-
-- Kloonaa repositorio ja mene komentorivillä harjoitustyo-kansioon
 
 - Asenna Poetryn avulla riippuvuudet komentorivillä:
 ```bash
