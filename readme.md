@@ -45,3 +45,9 @@ Testikattavuusraportin saat luotua komennolla:
 ```bash
 poetry run invoke coverage-report
 ```
+
+Tiedostossa .pylintrc määritetyt tarkastukset suoritetaan komennolla:
+
+```bash
+poetry run invoke style-check
+```

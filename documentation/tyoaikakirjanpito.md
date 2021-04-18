@@ -10,4 +10,10 @@
 | 12.4. | 0,5  | Codecov-ihmettelyä virtuaaliympäristössä |
 | 13.4. | 0,5  | Repositorion siistimistä |
 | vko 3 | 4    | |
-| yht   | 7    | | 
+| 14.4. | 1    | Pylint-konfigurointi ja koodin korjaus |
+| 14.4. | 2    | Sudokun sääntöjen viimeistely |
+| 16.4. | 1    | Ohjelmarakenteen viilausta, testien laajennusta |
+| 17.4. | 2    | Pygameen tutustumista |
+| 18.4. | 1    | Rakenteen refaktorointi, testien laajennus |
+| vko 4 | 7    | |
+| yht   | 8    | | 
