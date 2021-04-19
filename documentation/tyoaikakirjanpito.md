@@ -14,6 +14,7 @@
 | 14.4. | 2    | Sudokun sääntöjen viimeistely |
 | 16.4. | 1    | Ohjelmarakenteen viilausta, testien laajennusta |
 | 17.4. | 2    | Pygameen tutustumista |
-| 18.4. | 1    | Rakenteen refaktorointi, testien laajennus |
-| vko 4 | 7    | |
-| yht   | 8    | | 
+| 18.4. | 2    | Rakenteen refaktorointi, testien laajennus |
+| 19.4. | 2    | Pakkauskaavion luominen |
+| vko 4 | 10   | |
+| yht   | 17   | | 
