@@ -18,6 +18,7 @@ Pelin suorittaminen loppuu, kun kirjoitat "end". Saat pelin automaattisesti ratk
 
 - [Työaikakirjanpito](https://github.com/Aikamoine/ot-harjoitustyo/blob/master/documentation/tyoaikakirjanpito.md)
 - [Vaatimusmäärittely](https://github.com/Aikamoine/ot-harjoitustyo/blob/master/documentation/vaatimusmaarittely.md)
+- [Arkkitehtuurikuvaus](https://github.com/Aikamoine/ot-harjoitustyo/blob/master/documentation/arkkitehtuuri.md)
 
 ## Komennot
 
