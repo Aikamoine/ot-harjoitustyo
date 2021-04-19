@@ -1,5 +1,5 @@
 import math
-from tile import Tile
+from entities.tile import Tile
 from game_logic import GameLogic
 
 class Gameboard:

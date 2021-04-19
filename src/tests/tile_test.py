@@ -1,5 +1,5 @@
 import unittest
-from tile import Tile
+from entities.tile import Tile
 
 class TestTile(unittest.TestCase):
     def setUp(self):

@@ -8,11 +8,11 @@
 
 ### Tämän hetkinen toiminta
 
-Tällä hetkellä sovellus toimii komentorivillä. Se tulostaa yhden esimerkkisudokun ilman mitään muotoiluja ruutujen välillä. Tyhjään ruutuun voi syöttää numeron. Syötettä ei tällä hetkellä validoida, laadullisesti taikka pelin sääntöjen mukaan.
+Tällä hetkellä sovellus toimii komentorivillä. Se tulostaa yhden esimerkkisudokun ilman mitään muotoiluja ruutujen välillä. Tyhjään ruutuun voi syöttää numeron.
 
-Kun ohjelma käynnistyy, komentoriville tulostuu sudoku-peli. Voit lisätä numeroita tyhjiin ruutuihin kirjoittamalla komentoriville koordinaatit ja arvon muodossa "x,y,arvo". Taulukon origo on vasemmassa yläkulmassa, eli vasemman yläkulman sijanti on 0,0. Vasempaan yläkulmaan voi siis sijoittaa arvon 6 kirjoittamalla "0,0,6" ja painamalle enter.
+Kun ohjelma käynnistyy, komentoriville tulostuu sudoku-peli. Voit lisätä numeroita tyhjiin ruutuihin kirjoittamalla komentoriville koordinaatit ja arvon muodossa "x,y,arvo". Taulukon origo on vasemmassa yläkulmassa, eli vasemman yläkulman sijanti on 0,0. Vasempaan yläkulmaan voi siis sijoittaa arvon 6 kirjoittamalla "0,0,6".
 
-Pelin suorittaminen loppuu, kun kirjoitat "end" ja painat enter. Saat pelin automaattisesti ratkaistua, kun kirjoitat "solve". Yli viisi merkkiä pitkät syötteet jätetään huomioimatta.. Komentorivikäyttöliittymästä ei ole tarkoituskaan tehdä lopullista versiota, joten tämän syötteen validointiin ei erityisesti tulla panostamaan.
+Pelin suorittaminen loppuu, kun kirjoitat "end". Saat pelin automaattisesti ratkaistua, kun kirjoitat "solve". Yli viisi merkkiä pitkät syötteet jätetään huomioimatta. Komentorivikäyttöliittymästä ei ole tarkoituskaan tehdä lopullista versiota, joten tämän syötteen validointiin ei erityisesti tulla panostamaan.
 
 ## Dokumentaatio
 
