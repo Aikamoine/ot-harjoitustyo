@@ -8,7 +8,7 @@
 
 ### Tämän hetkinen toiminta
 
-Tällä hetkellä sovellus toimii komentorivillä. Se tulostaa yhden esimerkkisudokun ilman mitään muotoiluja ruutujen välillä. Tyhjään ruutuun voi syöttää numeron.
+Tällä hetkellä sovellus toimii komentorivillä. Se tulostaa yhden esimerkkisudokun ilman mitään muotoiluja ruutujen välillä. Tyhjään ruutuun voi syöttää numeron ja pelaajan syöttämiä numeroita voi muuttaa.
 
 Kun ohjelma käynnistyy, komentoriville tulostuu sudoku-peli. Voit lisätä numeroita tyhjiin ruutuihin kirjoittamalla komentoriville koordinaatit ja arvon muodossa "x,y,arvo". Taulukon origo on vasemmassa yläkulmassa, eli vasemman yläkulman sijanti on 0,0. Vasempaan yläkulmaan voi siis sijoittaa arvon 6 kirjoittamalla "0,0,6".
 
