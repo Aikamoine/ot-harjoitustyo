@@ -40,7 +40,7 @@ class Gameboard:
 
     def add_value(self, row, column, value):
         tile = self.tiles[row][column]
-
+        
         if not self.logic.can_add_value(tile, value):
             return False
         if tile.change_value(value):

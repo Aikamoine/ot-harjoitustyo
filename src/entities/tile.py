@@ -6,6 +6,8 @@ class Tile:
         self.initial = False
 
     def __str__(self):
+        if self.value == 0:
+            return ""
         return str(self.value)
 
     def change_value(self, new_value):

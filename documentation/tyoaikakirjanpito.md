@@ -17,4 +17,7 @@
 | 18.4. | 2    | Rakenteen refaktorointi, testien laajennus |
 | 19.4. | 2    | Pakkauskaavion luominen |
 | vko 4 | 10   | |
-| yht   | 17   | | 
+| 20.4. | 2    | Pygamen tunkkaaminen |
+| 21.4. | 2    | Pygamen näyttö kuntoon |
+| vko 5 | 4   | |
+| yht   | 17   | Viikko 5 lisäämättä| 

@@ -6,6 +6,8 @@ class GameLogic:
         self.board_square = int(math.sqrt(len(tiles)))
 
     def can_add_value(self, tile, value):
+        if value < 1 or value > len(self.tiles):
+            return False
         if not self.can_add_to_square(tile, value):
             return False
         if not self.can_add_to_row(tile, value):
