@@ -8,6 +8,7 @@ authors = ["Aikamoine <atte.laakso@helsinki.fi>"]
 python = "^3.8"
 pygame = "^2.0.1"
 invoke = "^1.5.0"
+pygame-menu = "^4.0.2"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.2"

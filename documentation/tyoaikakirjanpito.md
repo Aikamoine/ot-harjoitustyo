@@ -19,5 +19,8 @@
 | vko 4 | 10   | |
 | 20.4. | 2    | Pygamen tunkkaaminen |
 | 21.4. | 2    | Pygamen näyttö kuntoon |
-| vko 5 | 4   | |
+| 22.4. | 2    | Graafinen sudoku, valittu ruutu korostettu, voi lisätä arvoja |
+| 23.4. | 2    | Voi poistaa arvoja, main menu, SudokuLoader-luokan perusteet |
+| 24.4. | 2    | Rakenteen refaktorointi, testejä, dokumentaation päivitys|
+| vko 5 | 10   | |
 | yht   | 17   | Viikko 5 lisäämättä| 

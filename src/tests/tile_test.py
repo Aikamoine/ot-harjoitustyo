@@ -22,3 +22,5 @@ class TestTile(unittest.TestCase):
 
     def test_tile_string_returns_expected_value(self):
         self.assertEqual(str(self.tile), "")
+        self.tile.value = 5
+        self.assertEqual(str(self.tile), "5")

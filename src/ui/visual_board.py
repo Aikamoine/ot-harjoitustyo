@@ -1,10 +1,11 @@
 import pygame
 from ui.coordinate import Coordinate
+from ui.menu import Menu
 
 class VisualBoard:
-    def __init__(self, board):
+    def __init__(self, board, game_size):
         self.board = board
-        self.game_size = 500
+        self.game_size = game_size
         self.tile_size = self.game_size / self.board.board_length
         pygame.init()
         self.display = pygame.display.set_mode(
@@ -13,34 +14,7 @@ class VisualBoard:
         self.selection_x = Coordinate(self.game_size)
         self.selection_y = Coordinate(self.game_size)
         self.fps = pygame.time.Clock()
-
-    def start(self):
-        while True:
-            if self.handle_events() is False:
-                break
-            self.fps.tick(60)
-        pygame.quit()
-
-    def handle_events(self):
-        for event in pygame.event.get():
-            self.draw_board()
-
-            if event.type == pygame.QUIT:
-                return False
-            if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_LEFT:
-                    self.selection_x.change_value(-1 * self.tile_size)
-                if event.key == pygame.K_RIGHT:
-                    self.selection_x.change_value(self.tile_size)
-                if event.key == pygame.K_UP:
-                    self.selection_y.change_value(-1 * self.tile_size)
-                if event.key == pygame.K_DOWN:
-                    self.selection_y.change_value(self.tile_size)
-                if event.unicode.isnumeric():
-                    self.board.add_value(int((self.selection_y.value + 1) // self.tile_size),
-                                         int((self.selection_x.value + 1) // self.tile_size),
-                                         int(event.unicode))
-        return True
+        self.menu = Menu(self.display)
 
     def draw_board(self):
         self.display.fill((255, 255, 255))
@@ -70,6 +44,12 @@ class VisualBoard:
             pygame.draw.line(self.display, (0, 0, 0), (row * self.tile_size, 0),
                             (row * self.tile_size, self.game_size), thickness)
 
+    def move_selection(self, axis, direction):
+        if axis == "x":
+            self.selection_x.change_value(direction * self.tile_size)
+        if axis == "y":
+            self.selection_y.change_value(direction * self.tile_size)
+
     def highlight_selection(self):
         thickness = 6
         start_x = self.selection_x.value
@@ -84,12 +64,29 @@ class VisualBoard:
         pygame.draw.line(self.display, (0, 0, 0),
                         (start_x, start_y),
                         (start_x, end_y),
-                        thickness)                
-        pygame.draw.line(self.display, (0, 0, 0), 
+                        thickness)
+        pygame.draw.line(self.display, (0, 0, 0),
                         (end_x, start_y),
                         (end_x, end_y),
                         thickness)
-        pygame.draw.line(self.display, (0, 0, 0), 
+        pygame.draw.line(self.display, (0, 0, 0),
                         (start_x, end_y),
                         (end_x, end_y),
                         thickness)
+
+    def selection_to_cursor(self):
+        mouse_coordinates = pygame.mouse.get_pos()
+        self.selection_x.value = mouse_coordinates[0] - (mouse_coordinates[0] % self.tile_size)
+        self.selection_y.value = mouse_coordinates[1] - (mouse_coordinates[1] % self.tile_size)
+
+    def remove_value_at_selection(self):
+        self.board.remove_value(int((self.selection_y.value + 1) // self.tile_size),
+                               int((self.selection_x.value + 1) // self.tile_size))
+
+    def add_value_at_selection(self, value):
+        self.board.add_value(int((self.selection_y.value + 1) // self.tile_size),
+                            int((self.selection_x.value + 1) // self.tile_size),
+                            value)
+
+    def victory(self):
+        return self.board.is_full

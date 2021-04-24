@@ -11,7 +11,7 @@ class Tile:
         return str(self.value)
 
     def change_value(self, new_value):
-        if self.value != 0 and self.initial:
+        if self.initial:
             return False
         self.value = new_value
         return True

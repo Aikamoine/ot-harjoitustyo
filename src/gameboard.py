@@ -5,9 +5,11 @@ from game_logic import GameLogic
 class Gameboard:
     def __init__(self, row_length):
         self.tiles = []
+        self.solution = []
         self.board_length = row_length
         self.board_square = int(math.sqrt(row_length))
         self.filled_tiles = 0
+        self.is_full = False
 
         for row in range(0, self.board_length):
             column_array = []
@@ -17,17 +19,6 @@ class Gameboard:
             self.tiles.append(column_array)
 
         self.logic = GameLogic(self.tiles)
-
-    def print_board(self):
-        for row in range(0, self.board_length):
-            row_string = ""
-            for column in range(0, self.board_length):
-                tile = self.tiles[row][column]
-                if tile.value == 0:
-                    row_string = row_string + "  "
-                else:
-                    row_string = row_string + str(tile) + " "
-            print(row_string)
 
     def set_up_game(self, tiles):
         for row in range(0, self.board_length):
@@ -40,10 +31,19 @@ class Gameboard:
 
     def add_value(self, row, column, value):
         tile = self.tiles[row][column]
-        
+
         if not self.logic.can_add_value(tile, value):
             return False
         if tile.change_value(value):
             self.filled_tiles += 1
+            if self.filled_tiles == self.board_length * self.board_length:
+                self.is_full = True
             return True
         return False
+
+    def remove_value(self, row, column):
+        tile = self.tiles[row][column]
+        if not tile.change_value(0):
+            return False
+        self.filled_tiles -= 1
+        return True

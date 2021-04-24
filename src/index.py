@@ -1,43 +1,13 @@
-#import pygame
 from gameboard import Gameboard
-from ui.visual_board import VisualBoard
+from ui.gameloop import Gameloop
 
 def main():
     board = Gameboard(9)
 
     board.set_up_game(example_sudoku())
-    print("Pelataanko graafisella vai komentorivikäyttöliittymällä?")
-    print("Kirjoita cmd, jos haluat pelata komentorivillä")
 
-    if input() != "cmd":
-        visualboard = VisualBoard(board)
-        visualboard.start()
-    else:
-        while True:
-            print()
-            board.print_board()
-
-            move = input()
-            if move == "end":
-                break
-
-            if move == "solve":
-                for right_move in example_solving_inputs():
-                    board.add_value(
-                        right_move[0], right_move[1], right_move[2])
-
-            if board.filled_tiles == 9 * 9:
-                board.print_board()
-                print("Voitit pelin. Toivottavasti olet ylpeä itsestäsi...")
-                break
-
-            if len(move) == 5:
-                commands = move.split(",")
-                commands = list(map(int, commands))
-
-                if not board.add_value(commands[0], commands[1], commands[2]):
-                    print("Arvoa ei voi lisätä tai muuttaa")
-
+    loop = Gameloop(board, 500)
+    loop.start()
 
 def example_sudoku():
     game = []

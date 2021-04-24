@@ -6,18 +6,21 @@ class Test_logic(unittest.TestCase):
         self.board = Gameboard(9)
         self.board.set_up_game(example_sudoku())
 
-    def test_add_duplicate_to_row_returns_negative(self):
+    def test_add_duplicate_to_row_returns_false(self):
         self.assertFalse(self.board.add_value(3, 4, 5))
 
-    def test_add_duplicate_to_column_returns_negative(self):
+    def test_add_duplicate_to_column_returns_false(self):
         self.assertFalse(self.board.add_value(3, 3, 1))
 
-    def test_add_duplicate_to_square_returns_negative(self):
+    def test_add_duplicate_to_square_returns_false(self):
         self.board.add_value(3, 3, 2)
         self.assertFalse(self.board.add_value(3, 5, 2))
 
     def test_add_approved_value_returns_true(self):
         self.assertTrue(self.board.add_value(3, 3, 2))
+
+    def test_add_zero_returns_false(self):
+        self.assertFalse(self.board.add_value(3,5, 0))
 
     def test_cannot_change_initial_value(self):
         self.assertFalse(self.board.add_value(3, 2, 8))
