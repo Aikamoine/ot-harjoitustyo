@@ -13,7 +13,7 @@
 
 ### Uuden arvon lisääminen
 
-Alla olevissa sekvenssikaaviossa kuvataan ohjelman toimintalogiikka, kun käyttäjä yrittää lisätä valittuu ruutuun numeron.
+Alla olevassa sekvenssikaaviossa kuvataan ohjelman toimintalogiikka, kun käyttäjä yrittää lisätä valittuun ruutuun numeron.
 
 Kun käyttäjä lisää sudokun keskimmäisen 3x3 ruudukon vasempaan ylänurkaan arvon kaksi, joka on sääntöjen mukainen lisäys:
 ![Add_correct_value](./pictures/sequence_correct_value.png)
