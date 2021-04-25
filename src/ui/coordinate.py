@@ -4,5 +4,5 @@ class Coordinate:
         self.value = 0
 
     def change_value(self, value):
-        if self.value + value > 0 and self.value + value < self.max_value:
+        if self.value + value >= 0 and self.value + value < self.max_value - 1:
             self.value += value

@@ -9,15 +9,15 @@ class Menu:
         self.difficulty = difficulty
 
     def draw_main(self):
-        self.menu.add.selector('Difficulty :', [('Easy', 1), ('Hard', 2)],
+        self.menu.add.selector('Vaikeusaste :', [('Heleppo', 1), ('Huastava', 2)],
                               onchange=self.change_difficulty)
-        self.menu.add.button('Play', self.start_game)
-        self.menu.add.button('Quit', pygame_menu.events.EXIT)
+        self.menu.add.button('Aloita', self.start_game)
+        self.menu.add.button('Lopeta', pygame_menu.events.EXIT)
 
     def draw_victory(self):
-        congratulation = "Voitit pelin. Toivottavasti olet ylpeä itsestäsi."
-        self.menu.add.label(congratulation, max_char=-1)
-        self.menu.add.button('Quit', pygame_menu.events.EXIT)
+        self.menu.add.label("Voitit pelin.", max_char=-1)
+        self.menu.add.label("Toivottavasti olet ylpeä itsestäsi.", max_char=-1)
+        self.menu.add.button('Lopeta', pygame_menu.events.EXIT)
 
     def change_difficulty(self, value, difficulty):
         self.difficulty = difficulty

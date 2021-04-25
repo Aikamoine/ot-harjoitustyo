@@ -13,8 +13,10 @@ class VisualBoard:
         self.font = pygame.font.SysFont(None, 40)
         self.selection_x = Coordinate(self.game_size)
         self.selection_y = Coordinate(self.game_size)
-        self.fps = pygame.time.Clock()
         self.menu = Menu(self.display)
+
+    def set_up_game(self, difficulty):
+        self.board.set_up_game(difficulty)
 
     def draw_board(self):
         self.display.fill((255, 255, 255))
@@ -34,7 +36,7 @@ class VisualBoard:
         pygame.display.update()
 
     def draw_grid_lines(self):
-        for row in range(self.board.board_length):
+        for row in range(1, self.board.board_length):
             if row % self.board.board_square == 0:
                 thickness = 6
             else:

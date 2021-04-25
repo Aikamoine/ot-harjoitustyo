@@ -22,5 +22,6 @@
 | 22.4. | 2    | Graafinen sudoku, valittu ruutu korostettu, voi lisätä arvoja |
 | 23.4. | 2    | Voi poistaa arvoja, main menu, SudokuLoader-luokan perusteet |
 | 24.4. | 2    | Rakenteen refaktorointi, testejä, dokumentaation päivitys|
-| vko 5 | 10   | |
-| yht   | 17   | Viikko 5 lisäämättä| 
+| 25.4. | 3    | Erilaisten sudokujen lataus, riippuvuksien injektointia, sekvenssikaavio, release|
+| vko 5 | 13   | |
+| yht   | 30   | | 

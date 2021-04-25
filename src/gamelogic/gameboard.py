@@ -1,15 +1,16 @@
 import math
 from entities.tile import Tile
-from game_logic import GameLogic
+from gamelogic.game_logic import GameLogic
 
 class Gameboard:
-    def __init__(self, row_length):
+    def __init__(self, loader, row_length=9):
         self.tiles = []
         self.solution = []
         self.board_length = row_length
         self.board_square = int(math.sqrt(row_length))
         self.filled_tiles = 0
         self.is_full = False
+        self.loader = loader
 
         for row in range(0, self.board_length):
             column_array = []
@@ -20,11 +21,16 @@ class Gameboard:
 
         self.logic = GameLogic(self.tiles)
 
-    def set_up_game(self, tiles):
+    def set_up_game(self, difficulty):
+        if difficulty == 1:
+            puzzle = self.loader.easy_sudoku()
+        if difficulty == 2:
+            puzzle = self.loader.hard_sudoku()
+
         for row in range(0, self.board_length):
             for column in range(0, self.board_length):
                 tile = self.tiles[row][column]
-                tile.value = tiles[row][column]
+                tile.value = puzzle[row][column]
                 if tile.value > 0:
                     tile.initial = True
                     self.filled_tiles += 1

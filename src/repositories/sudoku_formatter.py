@@ -1,9 +1,11 @@
-#import random
 import math
 
 class SudokuFormatter:
-    def __init__(self, sudoku_csv):
-        sudoku_csv = sudoku_csv.replace(".","0")
+    def __init__(self):
+        self.sudoku_split = []
+
+    def format_sudoku_from_csv(self, csv):
+        sudoku_csv = csv.replace(".","0")
         self.sudoku_split = sudoku_csv.split(",")
 
     def get_puzzle(self):
@@ -13,7 +15,7 @@ class SudokuFormatter:
         return self._format_grid(self.sudoku_split[1])
 
     def _format_grid(self, sudoku_string):
-        row_length = int(math.sqrt(len(sudoku_string))) - 1
+        row_length = int(math.sqrt(len(sudoku_string)))
         sudoku = []
         for row in range(row_length):
             column = []

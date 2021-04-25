@@ -15,13 +15,15 @@ class Gameloop:
         self.start_menu.draw_main()
         self.start_menu.run_menu()
 
+        self.board_ui.set_up_game(self.start_menu.difficulty)
+
         while True:
-            if self.handle_events() is False:
+            if self._handle_events() is False:
                 break
             self.fps.tick(60)
         pygame.quit()
 
-    def handle_events(self):
+    def _handle_events(self):
         for event in pygame.event.get():
             self.board_ui.draw_board()
 
@@ -34,23 +36,29 @@ class Gameloop:
                 victorymenu.run_menu()
 
             if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_LEFT:
-                    self.board_ui.move_selection("x", -1)
-                if event.key == pygame.K_RIGHT:
-                    self.board_ui.move_selection("x", 1)
-                if event.key == pygame.K_UP:
-                    self.board_ui.move_selection("y", -1)
-                if event.key == pygame.K_DOWN:
-                    self.board_ui.move_selection("y", 1)
-                if event.key == pygame.K_BACKSPACE or event.key == pygame.K_DELETE:
-                    self.board_ui.remove_value_at_selection()
-                if event.unicode.isnumeric():
-                    self.board_ui.add_value_at_selection(int(event.unicode))
+                self._handle_keydown(event)
 
             if event.type == pygame.MOUSEBUTTONDOWN:
-                if event.button == 1:
-                    self.board_ui.selection_to_cursor()
-                if event.button == 3:
-                    self.start_menu.run_menu()
+                self._handle_mousedown(event)
 
         return True
+
+    def _handle_keydown(self, event):
+        if event.key == pygame.K_LEFT:
+            self.board_ui.move_selection("x", -1)
+        if event.key == pygame.K_RIGHT:
+            self.board_ui.move_selection("x", 1)
+        if event.key == pygame.K_UP:
+            self.board_ui.move_selection("y", -1)
+        if event.key == pygame.K_DOWN:
+            self.board_ui.move_selection("y", 1)
+        if event.key == pygame.K_BACKSPACE or event.key == pygame.K_DELETE:
+            self.board_ui.remove_value_at_selection()
+        if event.unicode.isnumeric():
+            self.board_ui.add_value_at_selection(int(event.unicode))
+
+    def _handle_mousedown(self, event):
+        if event.button == 1:
+            self.board_ui.selection_to_cursor()
+        if event.button == 3:
+            self.start_menu.run_menu()
