@@ -8,9 +8,9 @@
 
 ### Tämän hetkinen toiminta
 
-Kun ohjelma käynnistyy, tulostuu päävalikko. Tällä hetkellä vaikeusasteen valinta ei vaikuta pelin tilaan.
+Kun ohjelma käynnistyy, tulostuu päävalikko. Alkuvalikossa voit valita kahdesta eritasoisesta sudokusta.
 
-Peliruudulla voi liikkua nuolilla tai hiirellä. Numeronäppäimet täyttävät sudokuun numeron, jos se on sääntöjen mukaan mahdollista.
+Peliruudulla voi liikkua nuolilla tai hiirellä. Numeronäppäimet täyttävät sudokuun numeron, jos se on sääntöjen mukaan mahdollista. Delete tai Backspace poistaa arvon, jos se ei kuulu alkuperäiseen asetelmaan.
 
 Pelistä voi poistua klikkaamalla ruksista. Voit myös palata valikkoon hiiren oikealla näppämillä ja poistua sieltä - pelin tila säilyy jos käyt valikossa.
 
