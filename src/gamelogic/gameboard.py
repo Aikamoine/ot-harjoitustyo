@@ -38,7 +38,7 @@ class Gameboard:
 
     def load_saved_game(self):
         """Sets up the last saved game to be played.
-           If no saved game exists, defaults to setting an easy sudoku 
+           If no saved game exists, defaults to setting an easy sudoku
         """
         if self.loader.load_saved_game():
             self.puzzle = self._set_tiles(self.loader.puzzle)
@@ -46,7 +46,7 @@ class Gameboard:
             self.logic = GameLogic(self.puzzle)
         else:
             self.set_up_game("easy")
-    
+
     def _set_tiles(self, sudoku):
         """Formats an array of integers into an array of Tiles.
 
@@ -87,7 +87,7 @@ class Gameboard:
         return tile.change_value(value)
 
     def add_correct_value(self, add_to_x, add_to_y):
-        """Gets a value from the solution corresponding to the coordinates and adds it to board 
+        """Gets a value from the solution corresponding to the coordinates and adds it to board
 
         Args:
             add_to_x (int): row of the value to be changed

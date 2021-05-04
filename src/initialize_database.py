@@ -61,7 +61,7 @@ def add_sudokus_to_database(csv_path):
     formatter = SudokuFormatter()
     with open(csv_path) as csv_file:
         csv_reader = csv.reader(csv_file, delimiter=",")
-        
+
         for row in csv_reader:
             sudoku_data = formatter.dots_to_zeros(row)
             add_to_database(sudoku_data)
@@ -88,7 +88,6 @@ def initilize_database():
     """
     Runs the initialization routine
     """
-    connection = get_database_connection()
     drop_tables(connection)
     create_tables(connection)
 

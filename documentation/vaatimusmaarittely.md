@@ -18,15 +18,12 @@ Sovelluksessa on kolme eri näkymää. Aloitusruudulta valitaan millaisen pelin 
 - Pelillä on graafinen käyttöliittymä (tehty)
 - Pelaaja voi arpoa uuden pelin riittävän suuresta joukosta valmiita sudokuja (tehty, vko 6)
 
-### viimeiset vaatimukset (lisätty 2.5.)
-- pelin voi tallentaa ja palauttaa
-- pelimenusta voi mennä päämenuun
-- pelimenusta voi pyytää antamaan yhden oikean numeron
+### Lisätyt vaatimukset 2.5.
+- pelin voi tallentaa ja palauttaa (tehty, vko 6)
+- pelimenusta voi mennä päämenuun (tehty, vko 6)
+- pelimenusta voi pyytää antamaan yhden oikean numeron (tehty, vko 6)
 
 ## Jatkokehitysideoita
-- Pelitilan voi tallentaa ja palauttaa sessioiden välillä
-- Ohjelma osaa ehdottaa yhtä seuraavaa oikeaa numeroa
-  - myös automaattitoiminto pelin ratkaisemiseen
 - Mahdollisuus tehdä eri kokoisia sudokuja
-- Valmiit sudokut on ryhmitelty vaikeustason mukaan, käyttäjä voi aloittaessa valita minkätasoisen pelin haluaa
 - Tyhjiin ruutuihin voi merkitä muistiinpanoksi/testiksi pieniä numeroita
+- Sudokun rivi/sarake/ruudukko välähtävät punaisena sen mukaan, mikä virhe estää arvon syöttämisen

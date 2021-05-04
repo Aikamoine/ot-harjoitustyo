@@ -41,7 +41,7 @@ class Gameloop:
         pygame.quit()
 
     def initialize_game(self):
-        """Gets settings from main menu to initialize a new game 
+        """Gets settings from main menu to initialize a new game
         """
         self.main_menu.run_menu()
         if self.main_menu.load:

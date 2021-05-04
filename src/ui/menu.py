@@ -94,7 +94,7 @@ class GameMenu(Menu):
     def _return_to_main(self):
         self.save_and_return = True
         self.close_menu()
-    
+
     def _add_correct_value(self):
         self.add_value = True
         self.close_menu()

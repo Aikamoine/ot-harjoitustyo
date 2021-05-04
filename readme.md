@@ -6,19 +6,12 @@
 
 "Sudoku on logiikkapeli, jossa tehtävänä on täyttää neliönmuotoinen ruudukko merkeillä niin että jokaisella vaakarivillä ja pystyrivillä sekä jokaisessa osaneliössä käytetään samaa merkkiä tasan yhden kerran. Ruudukossa on aluksi valmiina jo muutama merkki. Yleisin sudoku on 9 × 9 -ruudukko, joka on jaettu yhdeksään 3 × 3 ruudun osaneliöön, ja merkkeinä käytetään numeroita 1–9."
 
-### Tämän hetkinen toiminta
-
-Kun ohjelma käynnistyy, tulostuu päävalikko. Alkuvalikossa voit valita kahdesta eritasoisesta sudokusta.
-
-Peliruudulla voi liikkua nuolilla tai hiirellä. Numeronäppäimet täyttävät sudokuun numeron, jos se on sääntöjen mukaan mahdollista. Delete tai Backspace poistaa arvon, jos se ei kuulu alkuperäiseen asetelmaan.
-
-Pelistä voi poistua klikkaamalla ruksista. Voit myös palata valikkoon hiiren oikealla näppämellä ja poistua sieltä - pelin tila säilyy jos käyt valikossa. Uuden pelin aloittaminen vaatii ohjelman uudelleenkäynnistämisen.
-
 ## Dokumentaatio
 
 - [Työaikakirjanpito](https://github.com/Aikamoine/ot-harjoitustyo/blob/master/documentation/tyoaikakirjanpito.md)
 - [Vaatimusmäärittely](https://github.com/Aikamoine/ot-harjoitustyo/blob/master/documentation/vaatimusmaarittely.md)
 - [Arkkitehtuurikuvaus](https://github.com/Aikamoine/ot-harjoitustyo/blob/master/documentation/arkkitehtuuri.md)
+- [Käyttöohje](https://github.com/Aikamoine/ot-harjoitustyo/blob/master/documentation/kayttohje.md)
 
 ## Komennot
 
