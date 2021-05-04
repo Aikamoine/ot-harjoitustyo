@@ -21,6 +21,10 @@
 ```bash
 poetry install
 ```
+- Ensimmäisellä kerralla suorita aloitusasetukset:
+```bash
+poetry run invoke initialize
+```
 - Käynnistä ohjelma komennolla:
 ```bash
 poetry run invoke start

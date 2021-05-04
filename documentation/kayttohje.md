@@ -8,6 +8,10 @@ Ohjelman viimeisimmän julkaistun version löydät [täältä](https://github.co
 ```bash
 poetry install
 ```
+- Ensimmäisellä kerralla suorita aloitusasetukset:
+```bash
+poetry run invoke initialize
+```
 - Käynnistä ohjelma komennolla:
 ```bash
 poetry run invoke start
@@ -20,6 +24,7 @@ poetry run invoke start
 ## Pelaaminen
 
 Pelin käynnistyessä aukeaa päävalikko:
+
 ![main_menu](./pictures/main_menu.png)
 
 Täällä voit valita pelin vaikeusasteen, aloittaa valitun vaikeusasteen pelin, ladata aiemmin tallennetun pelin, tai sulkea ohjelman. Jos aikaisempaa peliä ei löydy tallennettuna, niin "Jatka edellistä" valinta alustaa uuden heleppo-tasoisen sudokun.
@@ -27,6 +32,7 @@ Täällä voit valita pelin vaikeusasteen, aloittaa valitun vaikeusasteen pelin,
 Kaikissa pelin valikoissa voit liikkua hiirellä tai nuolilla. Valitseminen onnistuu hiiren ykköspainikkeella tai enter-näppäimellä.
 
 Pelin aloittaminen tai lataaminen johtaa peliruudukkoon:
+
 ![game_view](./pictures/game_view.png)
 
 Näet korostettuna aina ruudun, johon arvoa ollaan syöttämässä. Voit valita toisen ruudun nuolinäppäimillä, tai hiiren ykköspainikkeella. Uuden arvon voi syöttää näppäimistön numeroriviltä, tai numpadista. Valitun arvon voi poistaa delete- tai backspace-painikkeella.
@@ -34,6 +40,7 @@ Näet korostettuna aina ruudun, johon arvoa ollaan syöttämässä. Voit valita 
 Numeron lisääminen onnistuu vain, jos lisäys on sudokun sääntöjen mukainen ja ruudussa ei ole alkuperäiseen asetelmaan kuuluva arvo. Poistaminen onnistuu, jos poistettava arvo ei kuulu sudokun alkuperäiseen asetelmaan.
 
 Pelin aikana pääset menuun painamalla ESC-näppäintä tai hiiren kakkospainiketta:
+
 ![game_menu](./pictures/game_menu.png)
 
 Jatka-valinnalla pääset takaisin käynnissä olevaan peliin. "Anna oikea numero" -valinta tuo oikeasta ratkaisusta numeron sudokussa valittuna olevaan ruutuun. "Tallenna ja palaa päävalikkoon" tekee juuri mitä sen voisi kuvitella tekevän - kuten tekee myös "Lopeta tallentamatta". Huomaa, että sovelluksessa voi olla tallennettuna kerrallaan vain yksi peli - edellisen yli kirjoitetaan armottomasti, jos tallennat sen päälle!

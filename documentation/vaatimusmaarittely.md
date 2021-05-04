@@ -7,7 +7,7 @@ Sovelluksen avulla käyttäjä voi pelata Sudoku-pelejä itseään vastaan. Sove
 "Sudoku on logiikkapeli, jossa tehtävänä on täyttää neliönmuotoinen ruudukko merkeillä niin että jokaisella vaakarivillä ja pystyrivillä sekä jokaisessa osaneliössä käytetään samaa merkkiä tasan yhden kerran. Ruudukossa on aluksi valmiina jo muutama merkki. Yleisin sudoku on 9 × 9 -ruudukko, joka on jaettu yhdeksään 3 × 3 ruudun osaneliöön, ja merkkeinä käytetään numeroita 1–9."
 
 ## Käyttöliittymä
-Sovelluksessa on kolme eri näkymää. Aloitusruudulta valitaan millaisen pelin haluaa aloittaa - itse syötetyn sudokun vai valmiiksi tallennetun. Valinnasta riippuen aukeaa joko peliruutu suoraan tai sitten aukeaa ruutu, jossa voi täyttää sudokupelin aloitusnumerot ja sen jälkeen aloittaa kyseisen pelin.
+Sovelluksessa on kolme eri näkymää. Aloitusruudulta valitaan millaisen pelin haluaa aloittaa - itse syötetyn sudokun vai valmiiksi tallennetun. Valinnasta riippuen aukeaa joko peliruutu suoraan tai sitten aukeaa ruutu, jossa voi täyttää sudokupelin aloitusnumerot ja sen jälkeen aloittaa kyseisen pelin. Päivitys 2.5.: Itse luodun sudokun lisääminen poistettu käyttöliittymästä - sen sijaan tehty mahdollisuus lisätä csv-muotoinen sudoku peliin.
 
 ## Perusversion vaatimusmäärittely
 - Peli on tyypillinen 9 x 9 sudoku (tehty tehty)
