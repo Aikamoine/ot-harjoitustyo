@@ -15,8 +15,13 @@ Sovelluksessa on kolme eri näkymää. Aloitusruudulta valitaan millaisen pelin 
 - Käyttäjä pystyy syöttämään pelin täyttämättömiin ruutuihin numeroita 1 - 9 (tehty)
 - Käyttäjä ei voi syöttää mihinkään kohtaan sellaista numeroa, jonka syöttäminen rikkoisi sudokun sääntöjä (tehty)
 - Ohjelma tunnistaa kun ruudukko on täytetty ja onnittelee käyttäjää sydämellisesti (tehty)
-- Pelillä on graafinen käyttöliittymä (tehty, vko 5)
-- Pelaaja voi arpoa uuden pelin riittävän suuresta joukosta valmiita sudokuja
+- Pelillä on graafinen käyttöliittymä (tehty)
+- Pelaaja voi arpoa uuden pelin riittävän suuresta joukosta valmiita sudokuja (tehty, vko 6)
+
+### viimeiset vaatimukset (lisätty 2.5.)
+- pelin voi tallentaa ja palauttaa
+- pelimenusta voi mennä päämenuun
+- pelimenusta voi pyytää antamaan yhden oikean numeron
 
 ## Jatkokehitysideoita
 - Pelitilan voi tallentaa ja palauttaa sessioiden välillä

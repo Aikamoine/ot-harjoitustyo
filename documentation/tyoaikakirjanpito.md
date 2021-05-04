@@ -24,4 +24,14 @@
 | 24.4. | 2    | Rakenteen refaktorointi, testejä, dokumentaation päivitys|
 | 25.4. | 3    | Erilaisten sudokujen lataus, riippuvuksien injektointia, sekvenssikaavio, release|
 | vko 5 | 13   | |
-| yht   | 30   | | 
+| 28.4. | 1    | Docstringailua |
+| 29.4. | 2    | Koodikatselmointi |
+| 30.4. | 2    | Docstringailua, debuggausta |
+| 1.5.  | 2    | Dokumentaation kirjoitusta, Menujen laajennusta |
+| 2.5.  | 3    | Sudokut latautumaan tietokannasta |
+| 2.5.  | 1    | Oikean numeron lisäys pelimenusta |
+| 3.5.  | 3    | Oikean numeron lisäys pelimenusta |
+| 4.5.  | 1    | Testien päivittämistä |
+| 4.5.  | 2    | Dokumentointia, käyttöohje ja arkkitehtuuri |
+| vko 6 | 17   | |
+| yht   | 47   | | 

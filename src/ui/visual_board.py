@@ -1,9 +1,24 @@
 import pygame
 from ui.coordinate import Coordinate
-from ui.menu import Menu
 
 class VisualBoard:
+    """Class that draws the game board for the player
+
+    Attributes:
+        board: Gameboard object containing the sudoku's data
+        game_size: length of the drawn play area's side in pixels
+        tile_size: length of one sudokus numbers' area in pixels
+        display: pygame Display object for drawing the board
+        font: pygame Font for writing the numbers
+        selection_x: current selection's x axis on the board
+        selection_y: current selection's x axis on the board
+    """
     def __init__(self, board, game_size):
+        """
+        Args:
+            board (Gameboard): Gameboard object containing the sudoku's data
+            game_size (int): length of the drawn play area's side in pixels
+        """
         self.board = board
         self.game_size = game_size
         self.tile_size = self.game_size / self.board.board_length
@@ -13,16 +28,14 @@ class VisualBoard:
         self.font = pygame.font.SysFont(None, 40)
         self.selection_x = Coordinate(self.game_size)
         self.selection_y = Coordinate(self.game_size)
-        self.menu = Menu(self.display)
-
-    def set_up_game(self, difficulty):
-        self.board.set_up_game(difficulty)
 
     def draw_board(self):
+        """Draws the numbers from Gameboard
+        """
         self.display.fill((255, 255, 255))
         for row in range(self.board.board_length):
             for col in range(self.board.board_length):
-                tile = self.board.tiles[row][col]
+                tile = self.board.puzzle[row][col]
 
                 text = self.font.render(str(tile), 1, (0, 0, 0))
                 textpos = text.get_rect()
@@ -36,8 +49,10 @@ class VisualBoard:
         pygame.display.update()
 
     def draw_grid_lines(self):
+        """Draws the sudokus grid around the numbers
+        """
         for row in range(1, self.board.board_length):
-            if row % self.board.board_square == 0:
+            if row % self.board.board_squared == 0:
                 thickness = 6
             else:
                 thickness = 1
@@ -47,6 +62,11 @@ class VisualBoard:
                             (row * self.tile_size, self.game_size), thickness)
 
     def move_selection(self, axis, direction):
+        """
+        Args:
+            axis (string): which axis is to be moved
+            direction (integer): which direction to move, negative is towards origo
+        """
         if axis == "x":
             self.selection_x.change_value(direction * self.tile_size)
         if axis == "y":
@@ -78,8 +98,17 @@ class VisualBoard:
 
     def selection_to_cursor(self):
         mouse_coordinates = pygame.mouse.get_pos()
-        self.selection_x.value = mouse_coordinates[0] - (mouse_coordinates[0] % self.tile_size)
-        self.selection_y.value = mouse_coordinates[1] - (mouse_coordinates[1] % self.tile_size)
+        self.selection_to_coordinates(mouse_coordinates[0], mouse_coordinates[1])
+
+    def selection_to_coordinates(self, x_axis, y_axis):
+        """Moves current selection to assigned coordinates.
+           Converts the argument values to point at a Tiles top left
+        Args:
+            x_axis (float): value of x-axis
+            y_axis (float): value of y-axis
+        """
+        self.selection_x.value = x_axis - (x_axis % self.tile_size)
+        self.selection_y.value = y_axis - (y_axis % self.tile_size)
 
     def remove_value_at_selection(self):
         self.board.remove_value(int((self.selection_y.value + 1) // self.tile_size),
@@ -90,5 +119,22 @@ class VisualBoard:
                             int((self.selection_x.value + 1) // self.tile_size),
                             value)
 
+    def add_correct_value(self):
+        """Adds a correct value to current selection
+        """
+        add_to_x = int((self.selection_y.value + 1) // self.tile_size)
+        add_to_y = int((self.selection_x.value + 1) // self.tile_size)
+        self.board.add_correct_value(add_to_x, add_to_y)
+
+    def save(self):
+        """Saves game state
+        """
+        self.board.save()
+
     def victory(self):
-        return self.board.is_full
+        """Checks if game is won, i.e. the board is full
+
+        Returns:
+            [bool]: True if gameboard is full, False otherwise
+        """
+        return self.board.is_full()
