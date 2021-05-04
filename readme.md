@@ -12,7 +12,7 @@ Kun ohjelma käynnistyy, tulostuu päävalikko. Alkuvalikossa voit valita kahdes
 
 Peliruudulla voi liikkua nuolilla tai hiirellä. Numeronäppäimet täyttävät sudokuun numeron, jos se on sääntöjen mukaan mahdollista. Delete tai Backspace poistaa arvon, jos se ei kuulu alkuperäiseen asetelmaan.
 
-Pelistä voi poistua klikkaamalla ruksista. Voit myös palata valikkoon hiiren oikealla näppämillä ja poistua sieltä - pelin tila säilyy jos käyt valikossa.
+Pelistä voi poistua klikkaamalla ruksista. Voit myös palata valikkoon hiiren oikealla näppämellä ja poistua sieltä - pelin tila säilyy jos käyt valikossa. Uuden pelin aloittaminen vaatii ohjelman uudelleenkäynnistämisen.
 
 ## Dokumentaatio
 
