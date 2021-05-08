@@ -6,10 +6,7 @@ from repositories.sudoku_formatter import SudokuFormatter
 from connections import get_database_connection
 from connections import get_csv_path
 
-connection = get_database_connection()
-cursor = connection.cursor()
-
-def drop_tables(connection):
+def drop_tables(connection, cursor):
     """Deletes existing database tables, in case initialization is run more than once
 
     Args:
@@ -26,7 +23,7 @@ def drop_tables(connection):
 
     connection.commit()
 
-def create_tables(connection):
+def create_tables(connection, cursor):
     """Creates database tables for sudoku puzzles and saved games
 
     Args:
@@ -51,7 +48,7 @@ def create_tables(connection):
 
     connection.commit()
 
-def add_sudokus_to_database(csv_path):
+def add_sudokus_to_database(csv_path, connection, cursor):
     """Reads csv from given path and saves the puzzles in the database
 
     Args:
@@ -64,9 +61,9 @@ def add_sudokus_to_database(csv_path):
 
         for row in csv_reader:
             sudoku_data = formatter.dots_to_zeros(row)
-            add_to_database(sudoku_data)
+            add_to_database(sudoku_data, connection, cursor)
 
-def add_to_database(sudokudata):
+def add_to_database(sudokudata, connection, cursor):
     """Adds one sudoku, along with its solution and difficulty into database
 
     Args:
@@ -84,15 +81,17 @@ def add_to_database(sudokudata):
     except sqlite3.IntegrityError:
         return False
 
-def initilize_database():
+def initialize_database():
     """
     Runs the initialization routine
     """
-    drop_tables(connection)
-    create_tables(connection)
+    connection = get_database_connection()
+
+    drop_tables(connection, connection.cursor())
+    create_tables(connection, connection.cursor())
 
     csv_path = get_csv_path()
-    add_sudokus_to_database(csv_path)
+    add_sudokus_to_database(csv_path, connection, connection.cursor())
 
 if __name__ == '__main__':
-    initilize_database()
+    initialize_database()

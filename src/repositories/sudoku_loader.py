@@ -73,5 +73,5 @@ class SudokuLoader:
                                 ("lastsave", puzzle_string, solution_string))
             self.connection.commit()
             return True
-        except sqlite3.IntegrityError:
+        except sqlite3.OperationalError:
             return False

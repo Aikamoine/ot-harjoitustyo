@@ -4,14 +4,11 @@ Ohjelman viimeisimmän julkaistun version löydät [täältä](https://github.co
 
 ## Asennus ja käynnistys
 
-- Asenna Poetryn avulla riippuvuudet komentorivillä:
+- Asenna ennen ensimmäistä käyttöä Poetryn avulla riippuvuudet komentorivillä:
 ```bash
 poetry install
 ```
-- Ensimmäisellä kerralla suorita aloitusasetukset:
-```bash
-poetry run invoke initialize
-```
+
 - Käynnistä ohjelma komennolla:
 ```bash
 poetry run invoke start
@@ -43,8 +40,27 @@ Pelin aikana pääset menuun painamalla ESC-näppäintä tai hiiren kakkospainik
 
 ![game_menu](./pictures/game_menu.png)
 
-Jatka-valinnalla pääset takaisin käynnissä olevaan peliin. "Anna oikea numero" -valinta tuo oikeasta ratkaisusta numeron sudokussa valittuna olevaan ruutuun. "Tallenna ja palaa päävalikkoon" tekee juuri mitä sen voisi kuvitella tekevän - kuten tekee myös "Lopeta tallentamatta". Huomaa, että sovelluksessa voi olla tallennettuna kerrallaan vain yksi peli - edellisen yli kirjoitetaan armottomasti, jos tallennat sen päälle!
+Jatka-valinnalla pääset takaisin käynnissä olevaan peliin. "Anna oikea numero" -valinta tuo oikeasta ratkaisusta numeron sudokussa valittuna olevaan ruutuun. Jos menet valikkoon hiiren kakkospainikkeella, niin peliruudun valinta siirretään ruutuun, jonka kohdalla aktivoit valikon.
+
+"Tallenna ja palaa päävalikkoon" tekee juuri mitä sen voisi kuvitella tekevän - kuten tekee myös "Lopeta tallentamatta". Huomaa, että sovelluksessa voi olla tallennettuna kerrallaan vain yksi peli - edellisen yli kirjoitetaan armottomasti, jos tallennat sen päälle!
+
+### Voittaminen
 
 Kun saat ruudun täytettyä, aukeaa voittonäkymä, jossa sinua onnitellaan mahtavasta uroteostasi. Tästä näkymästä voit palata päävalikkoon aloittamaan uutta peliä, tai sulkea pelin.
 
 Missä tahansa vaiheessa voit sammuttaa oikean yläreunan ruksista.
+
+## Uusien sudokujen lisääminen
+
+Jos haluat lisätä peliin uusia sudokuja, niin voit tuoda uusia rivejä sudokus.csv-tiedostoon. Tiedoston sijainti on oletusarvoisesti src/data/sudokus.csv.
+
+Kun olet lisännyt rivin, pitää pelin tietokanta alustaa uudestaan. Tämä onnistuu joko varmistamalla, että tietokanta-tiedostoa ei ole (oletusarvoisesti src/data/sudokus.db), tai sitten ajamalla komentoriviltä:
+
+```bash
+poetry run invoke initialize
+```
+
+Voit generoida uusia valmiiksi oikeassa muodossa olevia sudokuja osoitteessa https://qqwing.com/generate.html.
+
+Voit myös lisätä oman sudokun jäljittelemällä muita sudokus.csv-tiedostosta. Ensimmäinen tietue on sudokun alkuasetelma rivi riviltä, vasemmalta oikealle, ylhäältä alas. Tyhjät ruudut merkitään pisteinä. Toinen tietue on sudokun ratkaisu samaan tapaan. Kolmas tietue on vaikeusaste, jonka pitää olla yksi vaihtoehdoista "easy", "medium, "hard" tai "pro".
+

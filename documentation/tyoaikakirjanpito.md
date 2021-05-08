@@ -34,4 +34,8 @@
 | 4.5.  | 1    | Testien päivittämistä |
 | 4.5.  | 2    | Dokumentointia, käyttöohje ja arkkitehtuuri |
 | vko 6 | 17   | |
-| yht   | 47   | | 
+| 8.5.  | 1    | Testejä |
+| 8.5.  | 3    | Koko dokumentaation viimeistely |
+| 8.5.  | 1    | Lopullinen julkaisu |
+| vko 7 | 5    | |
+| yht   | 52   | | 

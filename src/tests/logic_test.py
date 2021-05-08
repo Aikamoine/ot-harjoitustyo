@@ -2,6 +2,8 @@ import unittest
 from gamelogic.gameboard import Gameboard
 
 class FakeLoader:
+    """A class for testing SudokuLoader properties
+    """
     def __init__(self):
         self.puzzle = []
         self.solution = []

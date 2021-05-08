@@ -1,3 +1,4 @@
+from initialize_database import initialize_database
 from gamelogic.gameboard import Gameboard
 from ui.gameloop import Gameloop
 from repositories.sudoku_loader import SudokuLoader
@@ -6,8 +7,7 @@ from connections import database_exists
 
 def main():
     if not database_exists():
-        print("Aloitusasetuksia ei ole tehty. Suorita ensin 'poetry run invoke initialize'")
-        exit()
+        initialize_database()
     loader = SudokuLoader(get_database_connection())
     board = Gameboard(loader)
 
