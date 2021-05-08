@@ -23,6 +23,7 @@ class Gameloop:
         pygame.init()
         self.display = pygame.display.set_mode(
             (game_size, game_size))
+        pygame.display.set_caption("Sudoku")
         self.main_menu = MainMenu(self.display)
         self.board = board
         self.board_ui = VisualBoard(board, game_size)
