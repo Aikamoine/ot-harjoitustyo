@@ -11,7 +11,7 @@
 - [Käyttöohje](https://github.com/Aikamoine/ot-harjoitustyo/blob/master/documentation/kayttohje.md)
 - [Vaatimusmäärittely](https://github.com/Aikamoine/ot-harjoitustyo/blob/master/documentation/vaatimusmaarittely.md)
 - [Arkkitehtuurikuvaus](https://github.com/Aikamoine/ot-harjoitustyo/blob/master/documentation/arkkitehtuuri.md)
-- [Käyttöohje](https://github.com/Aikamoine/ot-harjoitustyo/blob/master/documentation/kayttohje.md)
+- [Testausdokumentaatio](https://github.com/Aikamoine/ot-harjoitustyo/blob/master/documentation/testausdokumentaatio.md)
 - [Työaikakirjanpito](https://github.com/Aikamoine/ot-harjoitustyo/blob/master/documentation/tyoaikakirjanpito.md)
 
 ## Komennot

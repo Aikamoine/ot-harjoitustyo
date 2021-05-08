@@ -22,7 +22,7 @@ Testauksessa käytetään tietokantakyselyjä tekevän SudokuLoader-luokan sijaa
  
 Nämä testit varmistavat, että SudokuFormatter-luokka toimii halutulla tavalla. Syötteet ovat suoraan testiluokissa tehtyjä oliota, jotka vastaavat pelin suorituksessa annettuja arvoja.
 
-[Tallentamisen ja lataamisen testit](https://github.com/Aikamoine/ot-harjoitustyo/blob/master/src/tests/loader_test.py
+[Tallentamisen ja lataamisen testit](https://github.com/Aikamoine/ot-harjoitustyo/blob/master/src/tests/loader_test.py)
 
 Tietokantaoperaatioita testataan TestLoader-luokalla. Nämä testit varmistavat, että tietokannan luominen, sinne tallentaminen, ja sieltä hakeminen, onnistuu. Testit luovat tätä varten oman Sqlite3-tietokannan, joka poistetaan aina testin päätteeksi.
 

@@ -34,6 +34,8 @@ Ensimmäinen tietue on pelin alkuasetelma, toinen tietue on pelin ratkaisu kolma
 
 Käyttäjä voi halutessaan lisätä [csv-tiedostoon](../src/data/sudokus.csv) uusia rivejä. Tiedostosta voi luonnollisesti myös poistaa rivejä, mutta sovellus ei osaa ottaa huomioon kaikkia mahdollisia virhetilanteita, jotka voivat syntyä rivien poistamisesta - tästä tarkemmin tämän dokumentin loppupuolella.
 
+Valmiiden sudokujen lisäksi samaan tietokantaa, toiseen tauluun, voidaan tallentaa keskeneräisen pelin tiedot. Peliä on sitten mahdollista jatkaa sovelluksen sulkemisen jälkeenkin.
+
 ## Päätoiminnallisuudet
 
 ### Pelin aloittaminen
@@ -41,6 +43,7 @@ Käyttäjä voi halutessaan lisätä [csv-tiedostoon](../src/data/sudokus.csv) u
 Aloitus vie pelaajan päävalikkoon. Täällä pelaaja voi valita vaikeusasteen ja aloittaa uuden pelin, tai hän voi ladata edellisen tallennetun pelin ja jatkaa siitä. Jos edellistä peliä ei ole tallennettu, pelaajalle alustetaan uusi helppo sudoku.
 
 Alla olevassa sekvenssikaaviossa on esitetty ohjelman toiminta, kun pelaaja on valinnut päävalikosta vaikeusasteen "Heleppo" ja painanut Aloita:
+
 ![load_new_game](./pictures/sequence_load_new.png)
 
 Gameloop pyytää Gameboard-oliota lataamaan uuden pelin menussa valitulla vaikeusasteella. Gameboard puolestaan pyytää SudokuLoader-oliotaan tekemään satunnaisen pelin latauksen. SudokuLoader tekee tietokantakyselyn parametrina sille annettu vaikeusaste. Saatujen tuloksien joukosta se arpoo yhden sudokun, jonka arvot se asettaa omiin oliomuuttujiinsa. Kun suoritus palaa Gameboard-oliolle, hakee se omalle pelialueelleen SudokuLoaderiin ladatut pelin ja ratkaisun. Tämän jälkeen Gameboard alustaa vielä pelin sääntöjä seuraavan GameLogic-olion, jolle viedään pelin ruudut.
@@ -71,7 +74,7 @@ Pelaajalle näytetään voittovalikko, josta pelin voi sulkea, tai voi palata p�
 
 ### Pelien tallentaminen
 
-Päävalikossa näytetään aina mahdollisuus ladata edellinen peli, vaikka sellaista ei olisikaan tallennettuna. Jos pelaaja yrittää avata tallennetun pelin, jota ei ole, alustaa peli hänelle uuden helpon sudokun. Tähän olisi toivottavia parannuksia
+Päävalikossa näytetään aina mahdollisuus ladata edellinen peli, vaikka sellaista ei olisikaan tallennettuna. Jos pelaaja yrittää avata tallennetun pelin, jota ei ole, alustaa peli hänelle uuden helpon sudokun. Tähän olisi kehitysideoita:
 - latauspainike ei näy, jos pelejä ei ole
 - olemattoman pelin lataaminen antaa virheilmoituksen
 - voisi tallentaa useamman pelin ja selailla tallennettuja pelejä valikosta

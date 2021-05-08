@@ -48,13 +48,15 @@ Jatka-valinnalla pääset takaisin käynnissä olevaan peliin. "Anna oikea numer
 
 Kun saat ruudun täytettyä, aukeaa voittonäkymä, jossa sinua onnitellaan mahtavasta uroteostasi. Tästä näkymästä voit palata päävalikkoon aloittamaan uutta peliä, tai sulkea pelin.
 
-Missä tahansa vaiheessa voit sammuttaa oikean yläreunan ruksista.
+### Lopettaminen
+
+Missä tahansa vaiheessa voit sammuttaa sovelluksen oikean yläreunan ruksista. Jokaisesta valikosta voi myös sammuttaa pelin Lopeta-valinnalla.
 
 ## Uusien sudokujen lisääminen
 
-Jos haluat lisätä peliin uusia sudokuja, niin voit tuoda uusia rivejä sudokus.csv-tiedostoon. Tiedoston sijainti on oletusarvoisesti src/data/sudokus.csv.
+Jos haluat lisätä peliin uusia sudokuja, niin voit tuoda uusia rivejä sudokus.csv-tiedostoon. Tiedoston sijainti on oletusarvoisesti "src/data/sudokus.csv".
 
-Kun olet lisännyt rivin, pitää pelin tietokanta alustaa uudestaan. Tämä onnistuu joko varmistamalla, että tietokanta-tiedostoa ei ole (oletusarvoisesti src/data/sudokus.db), tai sitten ajamalla komentoriviltä:
+Kun olet lisännyt rivin, pitää pelin tietokanta alustaa uudestaan. Tämä onnistuu joko varmistamalla, että tietokanta-tiedostoa ei ole (oletusarvoisesti "src/data/sudokus.db"), tai sitten ajamalla komentoriviltä:
 
 ```bash
 poetry run invoke initialize

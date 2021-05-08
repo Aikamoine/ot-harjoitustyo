@@ -9,7 +9,7 @@ Sovelluksen avulla käyttäjä voi pelata Sudoku-pelejä itseään "vastaan". So
 ## Käyttöliittymä
 Sovelluksessa on kolme eri näkymää. Aloitusruudulta valitaan millaisen pelin haluaa aloittaa - itse syötetyn sudokun vai valmiiksi tallennetun. Valinnasta riippuen aukeaa joko peliruutu suoraan tai sitten aukeaa ruutu, jossa voi täyttää sudokupelin aloitusnumerot ja sen jälkeen aloittaa kyseisen pelin.
 
-Päivitys 2.5.: Itse luodun sudokun lisääminen poistettu käyttöliittymän vaatimuksista - sen sijaan tehty mahdollisuus lisätä csv-muotoinen sudoku peliin.
+Päivitys 2.5.: Poistettu itse luodun sudokun lisääminen käyttöliittymän vaatimuksista - sen sijaan tehty mahdollisuus lisätä csv-muotoinen sudoku peliin.
 
 ## Perusversion vaatimusmäärittely
 - Peli on tyypillinen 9 x 9 sudoku (tehty)
@@ -19,8 +19,6 @@ Päivitys 2.5.: Itse luodun sudokun lisääminen poistettu käyttöliittymän va
 - Ohjelma tunnistaa kun ruudukko on täytetty ja onnittelee käyttäjää sydämellisesti (tehty)
 - Pelillä on graafinen käyttöliittymä (tehty)
 - Pelaaja voi arpoa uuden pelin riittävän suuresta joukosta valmiita sudokuja (tehty)
-
-### Päivitetyt vaatimukset 2.5.
 - Pelin voi tallentaa ja palauttaa (tehty)
 - Pelimenusta voi mennä päämenuun (tehty)
 - Pelimenusta voi pyytää antamaan yhden oikean numeron (tehty)
